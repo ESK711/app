@@ -5,12 +5,16 @@
   "author": "ESK711 <ero@crescent.africa>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon --exec ts-node --files server",
+    "start": "nodemon --exec ts-node --files --legacy-watch server/index.ts",
     "gen-schema-types": "ts-node --files server/scripts/createTypes.ts"
   },
   "dependencies": {
+    "@apollo/server": "*",
+    "@apollo/utils.keyvadapter": "*",
+    "@as-integrations/express5": "*",
     "@gql2ts/from-schema": "*",
-    "apollo-server-express": "*",
+    "@keyv/redis": "*",
+    "axios": "*",
     "connect-redis": "*",
     "dotenv": "*",
     "express": "*",
@@ -19,9 +23,14 @@
     "graphql-import": "*",
     "graphql-tools": "*",
     "ioredis": "*",
+    "keyv": "*",
+    "moment": "*",
     "nodemailer": "*",
+    "pg": "*",
+    "redis": "*",
     "reflect-metadata": "*",
     "type-graphql": "*",
+    "typeorm": "*",
     "zone.js": "*"
   },
   "devDependencies": {
