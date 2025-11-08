@@ -1,6 +1,6 @@
 import 'reflect-metadata'
-import 'zone.js/dist/zone-node'
+import 'zone.js'
 
-import { runServer } from './server'
+import { startServer } from './server'
 
-runServer()
+startServer()
